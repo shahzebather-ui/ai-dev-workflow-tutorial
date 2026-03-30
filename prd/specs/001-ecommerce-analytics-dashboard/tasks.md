@@ -18,8 +18,8 @@ description: "Task list for ShopSmart Sales Dashboard implementation"
 
 **Purpose**: Project initialization — creates the two files everything else depends on.
 
-- [ ] T001 Create `requirements.txt` at repo root with dependencies: `streamlit`, `pandas`, `plotly`
-- [ ] T002 Create `app.py` at repo root with page config and title: `st.set_page_config(page_title="ShopSmart Sales Dashboard")` and `st.title("ShopSmart Sales Dashboard")` (FR-001)
+- [x] T001 Create `requirements.txt` at repo root with dependencies: `streamlit`, `pandas`, `plotly`
+- [x] T002 Create `app.py` at repo root with page config and title: `st.set_page_config(page_title="ShopSmart Sales Dashboard")` and `st.title("ShopSmart Sales Dashboard")` (FR-001)
 
 ---
 
@@ -29,7 +29,7 @@ description: "Task list for ShopSmart Sales Dashboard implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T003 Implement `load_data()` in `app.py`: reads `data/sales-data.csv` with `pd.read_csv()`, parses `date` column via `pd.to_datetime(errors='coerce')`, drops rows where `total_amount` is null/NaN via `dropna()`, decorates with `@st.cache_data`, and wraps file read in try/except that calls `st.error("Unable to load data file. Please ensure 'data/sales-data.csv' exists in the repository root.")` then `st.stop()` on failure (FR-008, FR-009)
+- [x] T003 Implement `load_data()` in `app.py`: reads `data/sales-data.csv` with `pd.read_csv()`, parses `date` column via `pd.to_datetime(errors='coerce')`, drops rows where `total_amount` is null/NaN via `dropna()`, decorates with `@st.cache_data`, and wraps file read in try/except that calls `st.error("Unable to load data file. Please ensure 'data/sales-data.csv' exists in the repository root.")` then `st.stop()` on failure (FR-008, FR-009)
 
 **Checkpoint**: Run `streamlit run app.py` from repo root — page title renders, no errors in terminal.
 
@@ -43,8 +43,8 @@ description: "Task list for ShopSmart Sales Dashboard implementation"
 Total Orders = 482, Average Order Value = Total Sales ÷ 482. Values match manual CSV calculation
 to within $1 (SC-007).
 
-- [ ] T004 [P] [US1] Compute KPI scalars in `app.py` after `load_data()` call: `total_sales = df['total_amount'].sum()`, `total_orders = len(df)`, `avg_order_value = total_sales / total_orders` (FR-002, FR-003, FR-004; data-model.md KPI Scalars)
-- [ ] T005 [US1] Render KPI row in `app.py` using `st.columns(3)` with `st.metric()` for each card: col[0] label `"Total Sales"` value formatted as `f"${total_sales:,.0f}"`, col[1] label `"Total Orders"` value formatted as `f"{total_orders:,}"`, col[2] label `"Average Order Value"` value formatted as `f"${avg_order_value:,.2f}"` (ui-contract.md KPI Row Contract)
+- [x] T004 [P] [US1] Compute KPI scalars in `app.py` after `load_data()` call: `total_sales = df['total_amount'].sum()`, `total_orders = len(df)`, `avg_order_value = total_sales / total_orders` (FR-002, FR-003, FR-004; data-model.md KPI Scalars)
+- [x] T005 [US1] Render KPI row in `app.py` using `st.columns(3)` with `st.metric()` for each card: col[0] label `"Total Sales"` value formatted as `f"${total_sales:,.0f}"`, col[1] label `"Total Orders"` value formatted as `f"{total_orders:,}"`, col[2] label `"Average Order Value"` value formatted as `f"${avg_order_value:,.2f}"` (ui-contract.md KPI Row Contract)
 
 **Checkpoint**: At this point, User Story 1 is fully functional and independently demonstrable.
 
