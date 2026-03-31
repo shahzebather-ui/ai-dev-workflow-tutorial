@@ -62,3 +62,21 @@ region_sales = (
 )
 region_sales.columns = ["region", "total_sales"]
 region_sales = region_sales.sort_values("total_sales", ascending=False)
+
+fig_category = px.bar(
+    category_sales,
+    x="total_sales",
+    y="category",
+    orientation="h",
+    title="Sales by Category",
+    labels={"total_sales": "Sales ($)", "category": "Category"},
+)
+
+fig_region = px.bar(
+    region_sales,
+    x="total_sales",
+    y="region",
+    orientation="h",
+    title="Sales by Region",
+    labels={"total_sales": "Sales ($)", "region": "Region"},
+)
