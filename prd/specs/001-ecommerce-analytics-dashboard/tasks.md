@@ -58,8 +58,8 @@ to within $1 (SC-007).
 Hovering each point reveals month name and exact sales value. Sum of all monthly values
 equals the Total Sales KPI (SC-002, SC-004).
 
-- [ ] T006 [P] [US2] Compute `monthly_sales` DataFrame in `app.py`: `df.groupby(df['date'].dt.to_period('M'))['total_amount'].sum().reset_index()`, rename columns to `month` and `total_sales`, format `month` as string label `'Jan 2024'` via `month.dt.strftime('%b %Y')`, sort ascending by month (data-model.md Monthly Aggregate)
-- [ ] T007 [US2] Build Plotly Express line chart from `monthly_sales` in `app.py`: `px.line(monthly_sales, x='month', y='total_sales', title='Monthly Sales Trend', labels={'month': 'Month', 'total_sales': 'Sales ($)'})`, add `st.subheader("Monthly Sales Trend")` and render with `st.plotly_chart(fig_trend, use_container_width=True)` (ui-contract.md Sales Trend Chart Contract; FR-005)
+- [x] T006 [P] [US2] Compute `monthly_sales` DataFrame in `app.py`: `df.groupby(df['date'].dt.to_period('M'))['total_amount'].sum().reset_index()`, rename columns to `month` and `total_sales`, format `month` as string label `'Jan 2024'` via `month.dt.strftime('%b %Y')`, sort ascending by month (data-model.md Monthly Aggregate)
+- [x] T007 [US2] Build Plotly Express line chart from `monthly_sales` in `app.py`: `px.line(monthly_sales, x='month', y='total_sales', title='Monthly Sales Trend', labels={'month': 'Month', 'total_sales': 'Sales ($)'})`, add `st.subheader("Monthly Sales Trend")` and render with `st.plotly_chart(fig_trend, use_container_width=True)` (ui-contract.md Sales Trend Chart Contract; FR-005)
 
 **Checkpoint**: At this point, User Stories 1 and 2 both work independently.
 
