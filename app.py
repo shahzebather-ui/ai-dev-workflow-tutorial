@@ -46,3 +46,19 @@ fig_trend = px.line(
 )
 st.subheader("Monthly Sales Trend")
 st.plotly_chart(fig_trend, use_container_width=True)
+
+category_sales = (
+    df.groupby("category")["total_amount"]
+    .sum()
+    .reset_index()
+)
+category_sales.columns = ["category", "total_sales"]
+category_sales = category_sales.sort_values("total_sales", ascending=False)
+
+region_sales = (
+    df.groupby("region")["total_amount"]
+    .sum()
+    .reset_index()
+)
+region_sales.columns = ["region", "total_sales"]
+region_sales = region_sales.sort_values("total_sales", ascending=False)
