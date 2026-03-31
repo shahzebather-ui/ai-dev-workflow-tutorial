@@ -88,7 +88,7 @@ on desktop viewport (SC-003, SC-004).
 
 **Purpose**: End-to-end validation and deployment.
 
-- [ ] T013 [P] Validate all dashboard values against `quickstart.md` expected values: confirm Total Sales $650K–$700K, Total Orders = 482, trend chart has 12 data points, category chart has 5 bars, region chart has 4 bars; all within $1 tolerance (SC-007; quickstart.md Verify Expected Values)
+- [x] T013 [P] Validate all dashboard values against `quickstart.md` expected values: confirm Total Sales $650K–$700K, Total Orders = 482, trend chart has 12 data points, category chart has 5 bars, region chart has 4 bars; all within $1 tolerance (SC-007; quickstart.md Verify Expected Values)
 - [ ] T014 Deploy to Streamlit Community Cloud: commit `app.py`, `requirements.txt`, and `data/sales-data.csv` to `main` branch on GitHub; create new app at share.streamlit.io pointing to `main`/`app.py`; verify public URL loads correctly with all KPIs and charts (SC-006; quickstart.md Deployment section)
 
 ---
