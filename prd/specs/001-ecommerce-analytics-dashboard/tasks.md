@@ -78,7 +78,7 @@ on desktop viewport (SC-003, SC-004).
 - [x] T009 [P] [US3] Compute `region_sales` DataFrame in `app.py`: `df.groupby('region')['total_amount'].sum().reset_index()`, rename to `region` and `total_sales`, sort descending by `total_sales` (data-model.md Region Aggregate; FR-007)
 - [x] T010 [US3] Build Plotly Express horizontal bar chart for `category_sales` in `app.py`: `px.bar(category_sales, x='total_sales', y='category', orientation='h', title='Sales by Category', labels={'total_sales': 'Sales ($)', 'category': 'Category'})` — y-axis already sorted descending from T008 (ui-contract.md Category Chart Contract; FR-006)
 - [x] T011 [US3] Build Plotly Express horizontal bar chart for `region_sales` in `app.py`: `px.bar(region_sales, x='total_sales', y='region', orientation='h', title='Sales by Region', labels={'total_sales': 'Sales ($)', 'region': 'Region'})` — y-axis already sorted descending from T009 (ui-contract.md Region Chart Contract; FR-007)
-- [ ] T012 [US3] Render both breakdown charts side by side in `app.py` using `st.columns(2)`: col[0] renders `st.subheader("Sales by Category")` + `st.plotly_chart(fig_category, use_container_width=True)`, col[1] renders `st.subheader("Sales by Region")` + `st.plotly_chart(fig_region, use_container_width=True)` (ui-contract.md Breakdown Charts Contract)
+- [x] T012 [US3] Render both breakdown charts side by side in `app.py` using `st.columns(2)`: col[0] renders `st.subheader("Sales by Category")` + `st.plotly_chart(fig_category, use_container_width=True)`, col[1] renders `st.subheader("Sales by Region")` + `st.plotly_chart(fig_region, use_container_width=True)` (ui-contract.md Breakdown Charts Contract)
 
 **Checkpoint**: All three user stories are independently functional.
 

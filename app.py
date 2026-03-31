@@ -80,3 +80,11 @@ fig_region = px.bar(
     title="Sales by Region",
     labels={"total_sales": "Sales ($)", "region": "Region"},
 )
+
+col_cat, col_reg = st.columns(2)
+with col_cat:
+    st.subheader("Sales by Category")
+    st.plotly_chart(fig_category, use_container_width=True)
+with col_reg:
+    st.subheader("Sales by Region")
+    st.plotly_chart(fig_region, use_container_width=True)
